@@ -5,6 +5,7 @@ You're forking this repo as the starting point for the **UXD Vibecoding Hackatho
 This starter gives you:
 
 - A pre-written **PRD** (`PRD.md`) — read it. You don't write the PRD this year; your Milestone 2 is to review, fill in the team-specific TODOs, and commit.
+- A pre-written **DESIGN.md** with the design-system slots Person B fills in during M3 (in parallel with M2).
 - A **Vite + React + Tailwind** scaffold with the boilerplate already configured.
 - The locked `Task` data model and `STAGES` constant in `src/App.jsx`.
 - A `useLocalStorage` hook so persistence is one line.
@@ -51,27 +52,29 @@ Replace `<tag-name>` with the tag for the milestone you just finished — see th
 |---|---|---|
 | 1 | `git-linked` | Repo registered on the portal, webhook delivers test ping |
 | 2 | `prd-done` | PRD reviewed, team-specific TODOs filled in |
-| 3 | `data-model` | Four-column board renders with 3-4 mock tasks |
-| 4 | `crud-modal` | Add / edit / delete tasks via a modal, persisted to localStorage |
-| 5 | `tag-style` | Feature vs. bug visual distinction |
-| 6 | `due-tint` | Cards change color as deadlines approach |
-| 7 | `prompt-ctx` | Prompt Context field saves and shows up on tasks |
-| 8 | `copy-prompt` | One-click copy formatted prompt to clipboard |
-| 9 | `anchors` | Deliverable Anchor Board pinned above the Kanban |
-| 10 | `preview-link` | Live preview URL slot on each task |
-| 11 | `driver` | Assignee badge + "Hand off to..." dropdown |
-| 12 | `gh-fake` | Visual GitHub branch + PR status badge (faked) |
-| 13 | `pitch-ready` | Demo dataset loaded, pitch rehearsed, video recorded |
+| 3 | `design-done` | DESIGN.md filled in, color tokens pasted into `tailwind.config.js` (parallel to M2) |
+| 4 | `data-model` | Four-column board renders with 3-4 mock tasks |
+| 5 | `crud-modal` | Add / edit / delete tasks via a modal, persisted to localStorage |
+| 6 | `tag-style` | Feature vs. bug visual distinction |
+| 7 | `due-tint` | Cards change color as deadlines approach |
+| 8 | `prompt-ctx` | Prompt Context field saves and shows up on tasks |
+| 9 | `copy-prompt` | One-click copy formatted prompt to clipboard |
+| 10 | `anchors` | Deliverable Anchor Board pinned above the Kanban |
+| 11 | `preview-link` | Live preview URL slot on each task |
+| 12 | `driver` | Assignee badge + "Hand off to..." dropdown |
+| 13 | `gh-fake` | Visual GitHub branch + PR status badge (faked) |
+| 14 | `pitch-ready` | Demo dataset loaded, pitch rehearsed |
 
 ## Repo map
 
 ```
 .
 ├── PRD.md              ← READ THIS FIRST · review + fill in TODOs for M2
+├── DESIGN.md           ← Person B fills this in for M3 (parallel to M2)
 ├── README.md           ← you are here
 ├── package.json
 ├── vite.config.js
-├── tailwind.config.js
+├── tailwind.config.js  ← M3 design tokens land here too
 ├── postcss.config.js
 ├── index.html
 ├── .gitignore
@@ -94,7 +97,7 @@ Re-deploys happen automatically on every push to `main`.
 
 ## A word about prompts
 
-Once M7 (`prompt-ctx`) is done, log your real prompts inside the app itself. By the end of the hackathon you should have a handful of saved prompt contexts on real tasks — those become part of your Module 5 "Vibe Coding History" deliverable. Free credit, just by using your own tool.
+Once M8 (`prompt-ctx`) is done, log your real prompts inside the app itself. By the end of the hackathon you should have a handful of saved prompt contexts on real tasks — those become part of your Module 5 "Vibe Coding History" deliverable. Free credit, just by using your own tool.
 
 ---
 

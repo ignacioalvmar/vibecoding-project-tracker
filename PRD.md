@@ -6,7 +6,7 @@
 
 ## 1. Problem
 
-UXD bachelors who vibecode their projects have two recurring pains:
+Vibecoder teams have two recurring pains with large projects:
 
 1. **They lose track of tasks.** Three teammates, a hundred small things, no shared view. Nothing tells them what state each task is actually in.
 2. **They lose track of prompts.** The AI gave them working code two days ago but no one remembers the prompt that produced it. When they need to iterate, they start from scratch.
@@ -15,8 +15,8 @@ A spreadsheet doesn't solve this. A real project tool (Linear, Jira, Notion) is 
 
 ## 2. Target users
 
-- **Primary:** the three of us, for the remaining weeks of the summer semester.
-- **Secondary:** future cohorts of UXD bachelors doing the same module.
+- **Primary:** the team members, for the remaining weeks of the summer semester.
+- **Secondary:** future cohorts of vibecoders taking the same class.
 
 We are designing the tool we ourselves will use. The pitch demo is also our first real user test.
 
@@ -31,7 +31,7 @@ Each task carries the prompt context that produced it, so any teammate can click
 
 ## 4. Primary user flow
 
-1. Open the app. The board loads from local storage.
+1. Open the Webapp. The board loads from local storage.
 2. Click "+" to add a task. Fill in title, type, assignee, due date, prompt context.
 3. Move the task across columns as you work.
 4. When stuck, click "Copy as Prompt Context" on a task and paste it into Claude/ChatGPT/Cursor to continue.
@@ -113,34 +113,36 @@ Fill in the owner column. Recommended default in **bold**; change if your team h
 
 | # | Tag | Title | Suggested owner | Final owner |
 |---|---|---|---|---|
-| 3 | `data-model` | Task model + board view | **A** | `<TODO>` |
-| 4 | `crud-modal` | Add / edit / delete modal | **A** | `<TODO>` |
-| 5 | `tag-style` | Feature / bug colors | **B** | `<TODO>` |
-| 6 | `due-tint` | Due-date color tinting | **B** | `<TODO>` |
-| 7 | `prompt-ctx` | Prompt context field | **C** | `<TODO>` |
-| 8 | `copy-prompt` | Copy-to-prompt button | **C** | `<TODO>` |
-| 9 | `anchors` | Deliverable Anchor Board | **B** | `<TODO>` |
-| 10 | `preview-link` | Live preview URL slot | **B** | `<TODO>` |
-| 11 | `driver` | Driver + handoff | **A** | `<TODO>` |
-| 12 | `gh-fake` | GitHub mock badge | **C** | `<TODO>` |
-| 13 | `pitch-ready` | Demo + pitch rehearsal | **All** | `<TODO>` |
+| 3 | `design-done` | Design system + voice (DESIGN.md) | **B** | `<TODO>` |
+| 4 | `data-model` | Task model + board view | **A** | `<TODO>` |
+| 5 | `crud-modal` | Add / edit / delete modal | **A** | `<TODO>` |
+| 6 | `tag-style` | Feature / bug colors | **B** | `<TODO>` |
+| 7 | `due-tint` | Due-date color tinting | **B** | `<TODO>` |
+| 8 | `prompt-ctx` | Prompt context field | **C** | `<TODO>` |
+| 9 | `copy-prompt` | Copy-to-prompt button | **C** | `<TODO>` |
+| 10 | `anchors` | Deliverable Anchor Board | **B** | `<TODO>` |
+| 11 | `preview-link` | Live preview URL slot | **B** | `<TODO>` |
+| 12 | `driver` | Driver + handoff | **A** | `<TODO>` |
+| 13 | `gh-fake` | GitHub mock badge | **C** | `<TODO>` |
+| 14 | `pitch-ready` | Demo + pitch rehearsal | **All** | `<TODO>` |
 
-Track A owns the state model. Track B owns the visuals. Track C owns the differentiator features (M7 + M8 — the prompt context pair). Put your strongest prompter on Track C.
+Track A owns the state model. Track B owns the visuals (and design — M3 runs parallel to M2 so the team starts Phase 3 with the palette already chosen). Track C owns the differentiator features (M8 + M9 — the prompt context pair). Put your strongest prompter on Track C.
 
-**Dependency note.** M5 / M6 / M9 / M10 / M11 / M12 all depend on M3 + M4 being done first. While Person A builds M3+M4 (first ~60 min), Person B should set up Tailwind tokens and the Anchor Board mockup, Person C should draft the Markdown template for the "Copy as Prompt Context" output.
+**Dependency note.** M3 (`design-done`) runs **in parallel with M2** — Person B drafts DESIGN.md and pastes the colors into `tailwind.config.js` while the rest of the team reviews the PRD. M6 / M7 / M10 / M11 / M12 / M13 all depend on M4 + M5 being done first. While Person A builds M4+M5 (first ~60 min of Phase 3), Person C should draft the Markdown template for the "Copy as Prompt Context" output (M9).
 
 ## 10. AI / vibe coding angle
 
 Where AI will be heavily used:
-- M3, M4: scaffold the board and the modal from a single prompt each.
-- M7, M8: write the Markdown serialization helper.
-- M11: animation polish for the handoff toast.
+- M4, M5: scaffold the board and the modal from a single prompt each.
+- M8, M9: write the Markdown serialization helper.
+- M12: animation polish for the handoff toast.
 
 Where AI will **not** save you time:
 - M2 (this PRD review) — read it yourself.
-- M13 (pitch) — write the script in your own voice.
+- M3 (DESIGN.md) — design taste is yours, not the model's.
+- M14 (pitch) — write the script in your own voice.
 
-Log your prompts inside the app itself once M7 is done. This becomes part of the Module 5 "Vibe Coding History" deliverable.
+Log your prompts inside the app itself once M8 is done. This becomes part of the Module 5 "Vibe Coding History" deliverable.
 
 ## 11. Team identity
 
@@ -161,12 +163,11 @@ Fill in:
 
 ## 13. Definition of done
 
-The hackathon is "done" when all 13 milestone tags are pushed to your repo and visible on the dashboard. The pitch is "done" when:
+The hackathon is "done" when all 14 milestone tags are pushed to your repo and visible on the dashboard. The pitch is "done" when:
 
 - The board loads on Vercel without errors.
 - The "Copy as Prompt Context" demo works on stage.
-- One paragraph pitch is written.
-- A 60-second backup demo video has been recorded.
+- You have the 5 pitch ready.
 
 ---
 
