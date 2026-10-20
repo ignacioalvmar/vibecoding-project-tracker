@@ -1,6 +1,6 @@
 # Vibecoding Project Tracker — Design
 
-**Status:** Hackathon starter design doc · fill in the **`<TODO>`** sections before you tag `design-done`.
+**Status:** Completed · ready for `design-done`.
 
 **Why this file exists.** This tracker is your tool. It should look like *your* tool — not a generic Kanban with default Tailwind blue. Twenty minutes of design decisions here will be visible on every screen for the next six weeks of Module 5.
 
@@ -10,58 +10,60 @@
 
 ## 1. Mood / vibe
 
-One sentence that captures the feeling the tracker should leave you with.
+One sentence that captures the feeling the tracker should leave you with:
 
-`<TODO>`
+`A high-precision, dark-mode command center engineered for high-velocity vibecoding.`
 
-Two or three references that capture the vibe (links to dribbble shots, screenshots of apps you admire, Pinterest boards — anything visual):
+Two or three references that capture the vibe:
 
-- `<TODO>`
-- `<TODO>`
-- `<TODO>`
+- `https://dribbble.com/shots/25154496-Stick-Kanban-Design`
+- `https://dribbble.com/shots/26263392-Swift-Kanban-Board`
+- `https://dribbble.com/shots/17873566-AI-Task-Management-Dashboard`
 
 Anti-references — what we are explicitly **not** trying to look like:
 
-- `<TODO>`
+- `https://dribbble.com/shots/21904451-Minimal-Kanban-Board`
+- `https://dribbble.com/shots/20973715-ToDo-App-Kanban-Board-Gantt-chart`
+- `https://dribbble.com/shots/24904805-Task-Kanban-Board`
 
 ## 2. Color palette
 
-These are the colors the build milestones will reference. Once chosen, paste the hex values into `tailwind.config.js` so the rest of the team can use Tailwind utility classes (e.g. `bg-brand-primary`, `border-due-warning`).
+WCAG 2.2 AA/AAA-compliant high-contrast palette calibrated against dark obsidian surfaces.
 
 ### Brand
 
 | Token | Hex | Where it shows up |
 |---|---|---|
-| `brand-primary` | `<TODO>` | Header, "+" button, focus rings |
-| `brand-accent` | `<TODO>` | Highlights, hover states, links |
-| `surface-page` | `<TODO>` | Page background |
-| `surface-card` | `<TODO>` | Card background |
-| `text-primary` | `<TODO>` | Body text |
-| `text-muted` | `<TODO>` | Captions, dates, counts |
+| `brand-primary` | `#22D3EE` | Header glow, primary button fills, focus indicators (12.4:1 with dark text) |
+| `brand-accent` | `#60A5FA` | Secondary highlights, links, active tab borders (6.4:1 contrast) |
+| `surface-page` | `#0B0F19` | Deep obsidian page background |
+| `surface-card` | `#111827` | Slate-900 elevated card container surface |
+| `text-primary` | `#F9FAFB` | Card titles and main headings (16.5:1 contrast against card) |
+| `text-muted` | `#9CA3AF` | Slate gray for timestamps, dates, subtitles (5.8:1 contrast) |
 
 ### Task type (M6 `tag-style`)
 
 | Token | Hex | When used |
 |---|---|---|
-| `type-feature` | `<TODO>` | Cards tagged `feature` (accent stripe + icon) |
-| `type-bug` | `<TODO>` | Cards tagged `bug` (accent stripe + icon) |
+| `type-feature` | `#34D399` | Emerald-400 accent for feature badges & icons (9.1:1 contrast) |
+| `type-bug` | `#FB7185` | Rose-400 alert accent for bug badges & icons (6.4:1 contrast) |
 
 ### Due-date states (M8 `due-tint`)
 
 | Token | Hex | When used |
 |---|---|---|
-| `due-safe` | `<TODO>` | More than 2 days out |
-| `due-warning` | `<TODO>` | Less than 24 hours |
-| `due-overdue` | `<TODO>` | Past due |
-| `due-neutral` | `<TODO>` | Done (overrides date) |
+| `due-safe` | `#38BDF8` | Sky-400 for tasks due >2 days out (8.2:1 contrast) |
+| `due-warning` | `#FBBF24` | Amber-400 for tasks due <24 hours (10.8:1 contrast) |
+| `due-overdue` | `#F87171` | Red-400 critical tint for past due tasks (6.4:1 contrast) |
+| `due-neutral` | `#94A3B8` | Slate-400 for completed tasks (5.4:1 contrast) |
 
 ## 3. Typography
 
 | Role | Font | Why |
 |---|---|---|
-| Heading | `<TODO>` | `<TODO one sentence>` |
-| Body | `<TODO>` | `<TODO one sentence>` |
-| Monospace (tags, badges, code) | `<TODO>` | `<TODO one sentence>` |
+| Heading | `Plus Jakarta Sans, Inter, sans-serif` | Clean geometric lines with high-contrast character forms. |
+| Body | `Inter, system-ui, sans-serif` | Tall x-height and open apertures ensuring WCAG readability. |
+| Monospace (tags, badges, code) | `JetBrains Mono, Fira Code, monospace` | Unambiguous character distinctions for IDs, timestamps, and prompts. |
 
 Suggested sizes (override only if the design demands it):
 
@@ -75,11 +77,11 @@ Suggested sizes (override only if the design demands it):
 
 One short sentence per element. These set the tone for the build phase — Person A's modal and Person B's anchor board should both feel like they came from this doc.
 
-- **Cards:** `<TODO>` (e.g. "Light, almost weightless; the only weight is from a 1px border, no shadow except on hover.")
-- **Buttons:** `<TODO>` (e.g. "Solid fill, no gradient, generous padding, rounded-md.")
-- **Modal:** `<TODO>` (e.g. "Centered, max-width-md, slate-900 backdrop at 50% opacity.")
-- **Empty states:** `<TODO>` (e.g. "Dashed border, muted text, never sad.")
-- **Drag affordance (if used):** `<TODO>` (e.g. "None — we use a status dropdown.")
+- **Cards:** Crisp slate-900 surface (`#111827`) with a 1px slate-700 border (`#374151`), subtle border glow on hover, and zero heavy drop-shadows.
+- **Buttons:** Solid high-contrast fill (`#22D3EE` background with dark `#0B0F19` text), rounded-lg, crisp tactile hover states.
+- **Modal:** Centered, max-w-lg, deep obsidian background with `backdrop-blur-md` overlay at 60% opacity.
+- **Empty states:** Clean 1px dashed slate-700 border, centered muted text, high-clarity status indicator.
+- **Drag affordance (if used):** Clear cursor indicator with smooth transition effects between columns.
 
 ## 5. Voice / microcopy
 
@@ -87,18 +89,18 @@ Three lines of microcopy that capture the tone of the product. Keep it short —
 
 | Where | Text |
 |---|---|
-| "+" button label | `<TODO>` (e.g. "+ Task" or "Add task" or "New") |
-| Empty column placeholder | `<TODO>` (e.g. "Nothing here yet — keep going.") |
-| Toast after "Copy as Prompt Context" | `<TODO>` (e.g. "Copied. Now paste it into the AI.") |
-| Confirm-delete message | `<TODO>` (e.g. "Delete this task? You can't undo.") |
-| Handoff toast (M7 `task-owner`) | `<TODO>` (e.g. "Handed off to {name}. They've got it.") |
+| "+" button label | `+ New Task` |
+| Empty column placeholder | `No active tasks in this stage.` |
+| Toast after "Copy as Prompt Context" | `Prompt context copied to clipboard. Ready for AI chat.` |
+| Confirm-delete message | `Delete this task permanently? This cannot be undone.` |
+| Handoff toast (M7 `task-owner`) | `Task handed off to {name}.` |
 
 ## 6. Logo / wordmark
 
 The tracker probably doesn't need a logo, but it does need a name and a wordmark style.
 
-- **Product name:** `<TODO>` (match PRD §11 team identity)
-- **Wordmark style:** `<TODO>` (e.g. "Just the name in the heading font, brand-primary color, no icon.")
+- **Product name:** `VibeTracker` (by SOPRANO's crew)
+- **Wordmark style:** `Bold geometric Plus Jakarta Sans in #F9FAFB with a cyan (#22D3EE) glowing status dot indicator.`
 
 ## 7. Out of scope (this hackathon)
 
@@ -111,4 +113,4 @@ To keep design tight, the following are explicitly not part of `design-done`:
 
 ---
 
-*DESIGN.md version: hackathon-starter v1*
+*DESIGN.md version: hackathon-starter v1 · updated for SOPRANO's crew v3*

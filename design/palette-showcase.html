@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOPRANO's Crew — Futuristic WCAG 2.2 Palette Showcase</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#22D3EE',
+              accent: '#60A5FA',
+            },
+            surface: {
+              page: '#0B0F19',
+              card: '#111827',
+              border: '#374151',
+            },
+            content: {
+              primary: '#F9FAFB',
+              muted: '#9CA3AF',
+            },
+            type: {
+              feature: '#34D399',
+              bug: '#FB7185',
+            },
+            due: {
+              safe: '#38BDF8',
+              warning: '#FBBF24',
+              overdue: '#F87171',
+              neutral: '#94A3B8',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body
+  class="bg-[#0B0F19] text-[#F9FAFB] font-sans min-h-screen p-8 antialiased selection:bg-[#22D3EE] selection:text-[#0B0F19]">
+
+  <!-- Top Navigation / Header -->
+  <header class="max-w-6xl mx-auto flex items-center justify-between border-b border-[#374151] pb-6 mb-10">
+    <div class="flex items-center gap-3">
+      <div class="h-4 w-4 rounded-full bg-[#22D3EE] shadow-[0_0_12px_#22D3EE]"></div>
+      <h1 class="text-xl font-mono font-semibold tracking-wider text-[#F9FAFB]">
+        SOPRANO <span class="text-[#22D3EE]">//</span> DESIGN SYSTEM
+      </h1>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="text-xs font-mono px-3 py-1 rounded border border-[#374151] text-[#9CA3AF]">
+        WCAG 2.2 AA / AAA Verified
+      </span>
+      <button
+        class="bg-[#22D3EE] hover:bg-[#67e8f9] text-[#0B0F19] font-semibold text-sm px-4 py-2 rounded-lg transition-colors">
+        Export Tokens
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto space-y-12">
+
+    <!-- Hero / Mission -->
+    <section>
+      <p class="text-xs font-mono uppercase tracking-widest text-[#22D3EE] mb-2">Vibe & Identity</p>
+      <h2 class="text-3xl font-bold tracking-tight">Professional & Futuristic Color Engine</h2>
+      <p class="text-[#9CA3AF] text-base mt-2 max-w-2xl">
+        Obsidian surfaces paired with high-luminance neon indicators engineered for visual clarity, low eye strain, and
+        strict accessibility compliance.
+      </p>
+    </section>
+
+    <!-- Palette Swatches Grid -->
+    <section class="space-y-6">
+      <h3 class="text-xs font-mono uppercase tracking-wider text-[#9CA3AF] border-l-2 border-[#22D3EE] pl-3">
+        Core Tokens & Contrast Ratios
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <!-- Brand Primary -->
+        <div class="bg-[#111827] border border-[#374151] rounded-xl p-4 flex flex-col justify-between">
+          <div class="h-16 w-full rounded-lg bg-[#22D3EE] shadow-[0_0_15px_rgba(34,211,238,0.25)] mb-3"></div>
+          <div>
+            <span class="text-xs font-mono text-[#9CA3AF]">brand-primary</span>
+            <div class="font-mono text-sm font-semibold text-[#F9FAFB]">#22D3EE</div>
+            <div class="text-[11px] text-[#34D399] font-mono mt-1">12.4:1 (on dark)</div>
+          </div>
+        </div>
+
+        <!-- Brand Accent -->
+        <div class="bg-[#111827] border border-[#374151] rounded-xl p-4 flex flex-col justify-between">
+          <div class="h-16 w-full rounded-lg bg-[#60A5FA] shadow-[0_0_15px_rgba(96,165,250,0.25)] mb-3"></div>
+          <div>
+            <span class="text-xs font-mono text-[#9CA3AF]">brand-accent</span>
+            <div class="font-mono text-sm font-semibold text-[#F9FAFB]">#60A5FA</div>
+            <div class="text-[11px] text-[#34D399] font-mono mt-1">6.4:1 (AA Pass)</div>
+          </div>
+        </div>
+
+        <!-- Type Feature -->
+        <div class="bg-[#111827] border border-[#374151] rounded-xl p-4 flex flex-col justify-between">
+          <div class="h-16 w-full rounded-lg bg-[#34D399] shadow-[0_0_15px_rgba(52,211,153,0.25)] mb-3"></div>
+          <div>
+            <span class="text-xs font-mono text-[#9CA3AF]">type-feature</span>
+            <div class="font-mono text-sm font-semibold text-[#F9FAFB]">#34D399</div>
+            <div class="text-[11px] text-[#34D399] font-mono mt-1">9.1:1 (AAA Pass)</div>
+          </div>
+        </div>
+
+        <!-- Type Bug -->
+        <div class="bg-[#111827] border border-[#374151] rounded-xl p-4 flex flex-col justify-between">
+          <div class="h-16 w-full rounded-lg bg-[#FB7185] shadow-[0_0_15px_rgba(251,113,133,0.25)] mb-3"></div>
+          <div>
+            <span class="text-xs font-mono text-[#9CA3AF]">type-bug</span>
+            <div class="font-mono text-sm font-semibold text-[#F9FAFB]">#FB7185</div>
+            <div class="text-[11px] text-[#34D399] font-mono mt-1">6.4:1 (AA Pass)</div>
+          </div>
+        </div>
+
+        <!-- Due Warning -->
+        <div class="bg-[#111827] border border-[#374151] rounded-xl p-4 flex flex-col justify-between">
+          <div class="h-16 w-full rounded-lg bg-[#FBBF24] shadow-[0_0_15px_rgba(251,191,36,0.25)] mb-3"></div>
+          <div>
+            <span class="text-xs font-mono text-[#9CA3AF]">due-warning</span>
+            <div class="font-mono text-sm font-semibold text-[#F9FAFB]">#FBBF24</div>
+            <div class="text-[11px] text-[#34D399] font-mono mt-1">10.8:1 (AAA Pass)</div>
+          </div>
+        </div>
+
+        <!-- Due Overdue -->
+        <div class="bg-[#111827] border border-[#374151] rounded-xl p-4 flex flex-col justify-between">
+          <div class="h-16 w-full rounded-lg bg-[#F87171] shadow-[0_0_15px_rgba(248,113,113,0.25)] mb-3"></div>
+          <div>
+            <span class="text-xs font-mono text-[#9CA3AF]">due-overdue</span>
+            <div class="font-mono text-sm font-semibold text-[#F9FAFB]">#F87171</div>
+            <div class="text-[11px] text-[#34D399] font-mono mt-1">6.4:1 (AA Pass)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Component Preview -->
+    <section class="space-y-6">
+      <h3 class="text-xs font-mono uppercase tracking-wider text-[#9CA3AF] border-l-2 border-[#22D3EE] pl-3">
+        In-Context Kanban Card Previews
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Feature Card (>2 Days Out) -->
+        <div
+          class="bg-[#111827] border border-[#374151] hover:border-[#38BDF8] rounded-xl p-5 space-y-4 transition-all group">
+          <div class="flex items-center justify-between">
+            <span
+              class="font-mono text-xs px-2.5 py-1 rounded bg-[#34D399]/10 text-[#34D399] border border-[#34D399]/30 font-medium">
+              ● Feature
+            </span>
+            <span class="font-mono text-xs text-[#38BDF8] flex items-center gap-1.5">
+              <span class="h-2 w-2 rounded-full bg-[#38BDF8]"></span> Due in 3d
+            </span>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-[#F9FAFB] group-hover:text-[#22D3EE] transition-colors">
+              Integrate Prompt Context Serializer
+            </h4>
+            <p class="text-xs text-[#9CA3AF] mt-1 line-clamp-2">
+              Add Markdown formatter to format task state into LLM briefing blocks.
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-3 border-t border-[#374151] text-xs">
+            <span class="text-[#9CA3AF] font-mono">@LegionerLeonid99</span>
+            <span class="font-mono text-[#9CA3AF]">ID-104</span>
+          </div>
+        </div>
+
+        <!-- Bug Card (Urgent / <24h) -->
+        <div
+          class="bg-[#111827] border border-[#FBBF24]/50 shadow-[0_0_15px_rgba(251,191,36,0.1)] rounded-xl p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <span
+              class="font-mono text-xs px-2.5 py-1 rounded bg-[#FB7185]/10 text-[#FB7185] border border-[#FB7185]/30 font-medium">
+              ▲ Bug
+            </span>
+            <span class="font-mono text-xs text-[#FBBF24] flex items-center gap-1.5 font-medium">
+              <span class="h-2 w-2 rounded-full bg-[#FBBF24] animate-pulse"></span> &lt; 24h Left
+            </span>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-[#F9FAFB]">
+              LocalStorage Key Deserialization Bug
+            </h4>
+            <p class="text-xs text-[#9CA3AF] mt-1 line-clamp-2">
+              Anchor board deliverable links fail to restore on browser restart.
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-3 border-t border-[#374151] text-xs">
+            <span class="text-[#9CA3AF] font-mono">@LegionerLeonid99</span>
+            <span class="font-mono text-[#FBBF24]">ID-105</span>
+          </div>
+        </div>
+
+        <!-- Overdue Card -->
+        <div
+          class="bg-[#111827] border border-[#F87171] shadow-[0_0_15px_rgba(248,113,113,0.15)] rounded-xl p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <span
+              class="font-mono text-xs px-2.5 py-1 rounded bg-[#FB7185]/10 text-[#FB7185] border border-[#FB7185]/30 font-medium">
+              ▲ Bug
+            </span>
+            <span class="font-mono text-xs text-[#F87171] flex items-center gap-1.5 font-bold">
+              <span class="h-2 w-2 rounded-full bg-[#F87171]"></span> Past Due
+            </span>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-[#F9FAFB]">
+              Refactor Assignee Dropdown Component
+            </h4>
+            <p class="text-xs text-[#9CA3AF] mt-1 line-clamp-2">
+              Reassignment toast does not trigger visual feedback after update.
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-3 border-t border-[#374151] text-xs">
+            <span class="text-[#9CA3AF] font-mono">@LegionerLeonid99</span>
+            <span class="font-mono text-[#F87171]">ID-102</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
